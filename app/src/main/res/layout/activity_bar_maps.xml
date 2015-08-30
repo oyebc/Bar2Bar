@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:id="@+id/map" tools:context=".BarMapsActivity"
+    android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+    <ImageButton
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:id="@+id/menu_button"
+        android:background="#00FFFFFF"
+        android:src="@drawable/menu"
+        android:scaleType="fitXY"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="9dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" />
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:iconifiedByDefault="true"
+        android:icon="@drawable/search_icon"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/menu_button"
+        android:layout_toRightOf="@id/menu_button"
+        android:layout_margin="2dp"
+        android:showAsAction="collapseActionView">
+    </SearchView>
+
+
+
+  <!--  <com.sothree.slidinguppanel.SlidingUpPanelLayout
+         xmlns:sothree="http://schemas.android.com/apk/res-auto"
+         android:id="@+id/sliding_layout"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:gravity="bottom"
+         sothree:umanoPanelHeight="68dp"
+         sothree:umanoShadowHeight="4dp">
+
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:gravity="center"
+             android:text="Main Content"
+             android:textSize="16sp" />
+
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:gravity="center|top"
+             android:text="The Awesome Sliding Up Panel"
+             android:textSize="16sp" />
+
+     </com.sothree.slidinguppanel.SlidingUpPanelLayout> -->
+
+    <SlidingDrawer android:id="@+id/SlidingDrawer"
+        android:handle="@+id/slideHandleButton"
+        android:content="@+id/contentLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="150dip"
+        android:layout_alignParentBottom="true" >
+        <Button android:id="@+id/slideHandleButton"
+            android:layout_width="fill_parent"
+            android:layout_height="30dip"
+            android:textColor="@color/white"
+            android:text="Nearby Bars..."
+            android:visibility="visible"
+            android:background="@color/bar_green_opaque"
+            />
+       <LinearLayout android:id="@+id/contentLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@color/bar_green_translucent"
+            >
+ <!--           <LinearLayout android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@color/bar_green_translucent"
+                >
+              <Button android:id="@+id/Button01"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="Gretzky's"
+                    android:background="@color/bar_green_translucent"
+                    />
+                <Button android:id="@+id/Button02"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="Raptors' Bar"
+                    android:background="@color/bar_green_translucent"
+                    />
+                <Button android:id="@+id/Button03"
+                        android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+                    android:textColor="@color/white"
+                    android:text="Quilox Restaurant"
+                    android:background="@color/bar_green_translucent"
+                    />
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+            </LinearLayout>
+            <RatingBar android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:numStars="5" />-->
+        </LinearLayout>
+    </SlidingDrawer>
+</RelativeLayout>
